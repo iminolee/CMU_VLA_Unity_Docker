@@ -53,6 +53,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python-is-python3 \
     && rm -rf /var/lib/apt/lists/*
 
+# Install gdown
+RUN pip3 install gdown
+
 # Install additional ROS Noetic packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-noetic-tf \
